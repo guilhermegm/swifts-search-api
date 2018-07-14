@@ -1,0 +1,3 @@
+import FilterableSwiftTableContainer from "./containers/FilterableSwiftTableContainer"
+
+export default FilterableSwiftTableContainer
