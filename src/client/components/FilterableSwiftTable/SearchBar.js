@@ -1,4 +1,5 @@
 import React from "react"
+import { FilterableSwiftTableContext } from "../../containers/FilterableSwiftTableContainer"
 
 class SearchBar extends React.Component {
   handleQueryChange = e => {
@@ -8,12 +9,16 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={this.props.query}
-          onChange={this.handleQueryChange}
-        />
+        <FilterableSwiftTableContext.Consumer>
+          {({ query }) => (
+            <input
+              type="text"
+              placeholder="Search..."
+              value={query}
+              onChange={this.handleQueryChange}
+            />
+          )}
+        </FilterableSwiftTableContext.Consumer>
       </div>
     )
   }

@@ -5,8 +5,8 @@ import SwiftTable from "./SwiftTable"
 const FilterableSwiftTable = props => {
   return (
     <div>
-      <SearchBar query={props.query} onQueryChange={props.onQueryChange} />
-      <SwiftTable swifts={props.swifts} />
+      <SearchBar onQueryChange={props.onQueryChange} />
+      <SwiftTable />
     </div>
   )
 }
