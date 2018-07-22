@@ -29,7 +29,8 @@ const getCountriesTree = async () => {
 
     country.list.forEach(countrySwift => {
       countriesTree[country.country_code]["searchTree"].addWord({
-        word: countrySwift.swift_code
+        word: countrySwift.swift_code,
+        result: countrySwift
       })
     })
   }
