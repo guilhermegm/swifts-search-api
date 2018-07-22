@@ -7,7 +7,14 @@ const SwiftTable = props => {
     <div>
       <h3>Results</h3>
       <FilterableSwiftTableContext.Consumer>
-        {({ swifts }) => swifts.map(swift => <SwiftRow swift={swift} key={swift} />)}
+        {({ swifts }) =>
+          swifts.map(swift => (
+            <SwiftRow
+              text={`City: ${swift.city} - Bank: ${swift.bank} - SWIFT: ${swift.swift_code}`}
+              key={swift.id}
+            />
+          ))
+        }
       </FilterableSwiftTableContext.Consumer>
     </div>
   )
